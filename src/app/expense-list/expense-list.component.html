@@ -1,0 +1,25 @@
+<h2> Expenses List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Category </th>
+            <th> Authorized by </th>
+            <th> Amount </th>
+            <th> Factory </th>
+            <th> Options </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let expense of expenses" >
+            <td> {{ expense.category }} </td>
+            <td> {{ expense.authorizedBy }} </td>
+            <td> {{ expense.expenseAmount }} </td>
+            <td> {{ expense.factory }} </td>
+            <td>
+                <!--button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button-->
+                <button (click) = "deleteExpense(expense.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <!--button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button-->
+            </td>
+        </tr>
+    </tbody>
+</table>

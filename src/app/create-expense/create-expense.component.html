@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Expense </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Category</label>
+            <input type="text" class ="form-control" id = "category"
+                [(ngModel)] = "expenses.category" name = "category">
+        </div>
+    
+        <div class="form-group">
+            <label> Authorized by</label>
+            <input type="text" class ="form-control" id = "authorizedBy"
+                [(ngModel)] = "expenses.authorizedBy" name = "authorizedBy">
+        </div>
+    
+        <div class="form-group">
+            <label> Amount </label>
+            <input type="text" class ="form-control" id = "expenseAmount"
+                [(ngModel)] = "expenses.expenseAmount" name = "expenseAmount">
+        </div>
+        <div class="form-group">
+            <label> Factory </label>
+            <input type="text" class ="form-control" id = "factory"
+                [(ngModel)] = "expenses.factory" name = "factory">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
